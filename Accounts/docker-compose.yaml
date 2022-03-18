@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: emkychuks062/accounts:latest
+    mem_reservation: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - emkychuks062-network
+
+  loan:
+    image: emkychuks062/loan
+    mem_reservation: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - emkychuks062-network
+
+  cards:
+    image: emkychuks062/cards
+    mem_reservation: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      - emkychuks062-network
+
+networks:
+  emkychuks062-network:
